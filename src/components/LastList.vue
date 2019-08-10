@@ -6,7 +6,7 @@
     </div>
     <slot name="lastCreateList">
       <div class="topics-item" v-for="(item, index) in userInfo.recent_topics" v-if="index < 5 && item" :key="item.id">
-        <div v-if="userInfo.recent_topics.length === 1">无</div>
+        <div v-if="userInfo.recent_topics.length === 0">无</div>
         <router-link :to="'/user/'+userInfo.loginname">
           <img :src="userInfo.avatar_url" :title="userInfo.loginname" class="avatar">
         </router-link>
