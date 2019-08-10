@@ -79,6 +79,10 @@
     font-size: 15px;
     line-height: 1.7em;
   }
+  .markdown-text img {
+    width: 100%;
+    vertical-align: middle;
+  }
   .markdown-text a:link,
   .markdown-text a:visited
   {
