@@ -4,7 +4,9 @@
     <div class="comment-body" v-show="isShow" >
       <div class="comment-item" v-for="(item,index) in commentList" :key="item.id">
         <div>
-          <a href=""><img :src="item.author.avatar_url" class="avatar"></a>
+          <router-link :to="'/user/'+item.author.loginname">
+            <img :src="item.author.avatar_url" class="avatar">
+          </router-link>
           <span class="comment-name">{{item.author.loginname}}</span>
           <span class="floor-info">{{index+1}}楼 • {{item.create_at | dateFormat}}</span>
           <span class="up" v-show="item.ups.length !== 0">
